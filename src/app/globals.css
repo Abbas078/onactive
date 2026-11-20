@@ -1,26 +1,66 @@
 @import "tailwindcss";
 
+@theme {
+  --color-navy: #102D4F;
+  --color-navy-dark: #0A1C33;
+  --color-navy-light: #183F6C;
+  --color-navy-surface: #0D2542;
+
+  --color-orange: #F47721;
+  --color-orange-hover: #DF6410;
+  --color-orange-light: #FFF4EB;
+  --color-orange-subtle: #FDE8D7;
+
+  --color-bg-light: #F5F8FB;
+  --color-bg-subtle: #EBF1F7;
+
+  --color-border-subtle: #DCE5EF;
+
+  --color-text-secondary: #52647A;
+  --color-text-muted: #7B8E9F;
+
+  --shadow-card: 0 4px 20px -2px rgba(16, 45, 79, 0.06), 0 2px 6px -1px rgba(16, 45, 79, 0.04);
+  --shadow-card-hover: 0 12px 28px -4px rgba(16, 45, 79, 0.12), 0 4px 10px -2px rgba(16, 45, 79, 0.06);
+  --shadow-button: 0 4px 14px 0 rgba(244, 119, 33, 0.35);
+}
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #102D4F;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Strictly enforce light theme throughout the medical website */
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #102D4F;
+  font-family: var(--font-sans, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Custom medical scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F8FB;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C4D2E3;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9DB4CE;
 }
