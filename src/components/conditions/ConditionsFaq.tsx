@@ -63,11 +63,10 @@ export function ConditionsFaq() {
               return (
                 <div
                   key={idx}
-                  className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
-                    isOpen
+                  className={`rounded-2xl border transition-all duration-200 overflow-hidden ${isOpen
                       ? "border-[#F47721]/40 bg-[#F5F8FB] shadow-xs"
                       : "border-[#DCE5EF] bg-white hover:border-[#102D4F]/20"
-                  }`}
+                    }`}
                 >
                   <button
                     onClick={() => toggle(idx)}
@@ -77,11 +76,10 @@ export function ConditionsFaq() {
                       {faq.question}
                     </span>
                     <span
-                      className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${
-                        isOpen
+                      className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${isOpen
                           ? "bg-[#F47721] text-white rotate-180"
                           : "bg-[#F5F8FB] text-[#102D4F] border border-[#DCE5EF]"
-                      }`}
+                        }`}
                     >
                       <ChevronDown className="w-4 h-4" />
                     </span>
@@ -101,3 +99,4 @@ export function ConditionsFaq() {
     </section>
   );
 }
+

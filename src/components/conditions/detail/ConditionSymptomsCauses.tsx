@@ -99,3 +99,4 @@ export function ConditionSymptomsCauses({ condition }: ConditionSymptomsCausesPr
     </section>
   );
 }
+

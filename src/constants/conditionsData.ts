@@ -1338,3 +1338,4 @@ export const CONDITIONS_DATA: Record<string, ConditionDetail> = {
     ],
   },
 };
+

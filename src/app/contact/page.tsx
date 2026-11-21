@@ -1,26 +1,38 @@
 import { Metadata } from "next";
-import { PlaceholderPage } from "@/components/ui/PlaceholderPage";
+import { ContactHero } from "@/components/contact/ContactHero";
+import { ContactDetailsGrid } from "@/components/contact/ContactDetailsGrid";
+import { ContactForm } from "@/components/contact/ContactForm";
+import { ContactClinicCards } from "@/components/contact/ContactClinicCards";
+import { AppointmentCtaSection } from "@/components/home/AppointmentCtaSection";
 
 export const metadata: Metadata = {
-  title: "Contact Arthrogenix | Dr. Ankit Jaipal Jaipur",
+  title: "Contact Dr. Ankit Jaipal | Arthrogenix Orthopaedics Jaipur",
   description:
-    "Get in touch with Dr. Ankit Jaipal's clinic in Durgapura and Sevayatan Hospital, Jaipur. Phone, WhatsApp, directions, and OPD hours.",
+    "Contact Dr. Ankit Jaipal — Consultant Orthopaedics at Arthrogenix Jaipur. Phone +91 7351755551, WhatsApp, email, and clinic locations at Durgapura, Sevayatan Hospital, and Vaishali Nagar.",
+  alternates: {
+    canonical: "https://arthrogenix.in/contact",
+  },
+  openGraph: {
+    title: "Contact Dr. Ankit Jaipal | Arthrogenix Jaipur",
+    description:
+      "Call, WhatsApp, or send an enquiry to Dr. Ankit Jaipal's orthopaedic clinic in Jaipur. OPD timings, clinic addresses, and direct contact.",
+    url: "https://arthrogenix.in/contact",
+    siteName: "Arthrogenix - Dr. Ankit Jaipal",
+    locale: "en_IN",
+    type: "website",
+  },
 };
 
 export default function ContactPage() {
   return (
-    <PlaceholderPage
-      title="Contact & OPD Timings"
-      category="Direct Clinical Assistance"
-      phaseNumber={7}
-      description="Connect directly with our care coordination team for consultations, MRI second opinions, surgery inquiries, and emergency guidance."
-      upcomingFeatures={[
-        "Interactive Google Maps for Durgapura and Vaishali Nagar clinics",
-        "Direct one-click Calling and WhatsApp dispatch",
-        "Structured contact inquiry form with patient privacy safeguards",
-        "Clear OPD hours and hospital admission directions",
-      ]}
-    />
+    <main className="min-h-screen bg-white">
+      <ContactHero />
+      <ContactDetailsGrid />
+      <div className="bg-[#F5F8FB]">
+        <ContactClinicCards />
+        <ContactForm />
+      </div>
+      <AppointmentCtaSection />
+    </main>
   );
 }
-

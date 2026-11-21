@@ -84,3 +84,4 @@ export function ConditionRelatedTreatments({ condition }: ConditionRelatedTreatm
     </section>
   );
 }
+

@@ -61,3 +61,4 @@ export function WhenSurgeryNeeded({ condition }: WhenSurgeryNeededProps) {
     </section>
   );
 }
+

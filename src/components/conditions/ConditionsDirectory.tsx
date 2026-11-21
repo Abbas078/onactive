@@ -85,11 +85,10 @@ export function ConditionsDirectory() {
                 <button
                   key={cat.id}
                   onClick={() => setSelectedCategory(cat.id)}
-                  className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition-all shrink-0 cursor-pointer ${
-                    active
+                  className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition-all shrink-0 cursor-pointer ${active
                       ? "bg-[#102D4F] text-white shadow-xs"
                       : "bg-[#F5F8FB] text-[#52647A] hover:bg-[#DCE5EF] hover:text-[#102D4F]"
-                  }`}
+                    }`}
                 >
                   {cat.label}
                 </button>
@@ -113,13 +112,12 @@ export function ConditionsDirectory() {
                       {condition.category}
                     </span>
                     <span
-                      className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
-                        condition.urgency === "Urgent Trauma Care"
+                      className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${condition.urgency === "Urgent Trauma Care"
                           ? "bg-rose-50 text-rose-700 border border-rose-200"
                           : condition.urgency === "Prompt Specialist Review"
-                          ? "bg-amber-50 text-amber-800 border border-amber-200"
-                          : "bg-emerald-50 text-emerald-700 border border-emerald-200"
-                      }`}
+                            ? "bg-amber-50 text-amber-800 border border-amber-200"
+                            : "bg-emerald-50 text-emerald-700 border border-emerald-200"
+                        }`}
                     >
                       {condition.urgency}
                     </span>
@@ -197,3 +195,4 @@ export function ConditionsDirectory() {
     </section>
   );
 }
+
