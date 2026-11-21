@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronRight, Calendar, Clock, Tag, ShieldAlert } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { BlogPost } from "@/constants/blogData";
@@ -16,9 +17,9 @@ export function ArticleHero({ post }: ArticleHeroProps) {
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-white/5 rounded-full blur-2xl pointer-events-none -ml-20 -mb-20" />
 
       <Container>
-        <div className="relative z-10 max-w-4xl">
+        <div className="relative z-10 max-w-4xl mx-auto space-y-6">
           {/* Breadcrumbs */}
-          <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1.5 text-xs text-white/70 mb-5">
+          <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1.5 text-xs text-white/70">
             <Link href="/" className="hover:text-white transition-colors">
               Home
             </Link>
@@ -31,7 +32,7 @@ export function ArticleHero({ post }: ArticleHeroProps) {
           </nav>
 
           {/* Category Badge & Meta */}
-          <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-4">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3">
             <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-[#F47721] text-white shadow-sm">
               <Tag className="w-3 h-3" />
               {post.category}
@@ -51,17 +52,29 @@ export function ArticleHero({ post }: ArticleHeroProps) {
           </div>
 
           {/* Title */}
-          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight mb-4">
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
             {post.title}
           </h1>
 
           {/* Subtitle */}
-          <p className="text-base sm:text-lg text-white/85 leading-relaxed mb-6">
+          <p className="text-base sm:text-lg text-white/85 leading-relaxed">
             {post.subtitle}
           </p>
 
+          {/* Editorial Featured Image (16:9) */}
+          <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20 bg-white/5 ring-1 ring-white/10 mt-6">
+            <Image
+              src={post.image}
+              alt={post.imageAlt}
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 900px"
+              className="object-cover"
+            />
+          </div>
+
           {/* Clinical Review Status Banner */}
-          <div className="p-4 rounded-xl bg-white/10 border border-white/15 backdrop-blur-sm flex items-start gap-3">
+          <div className="p-4 rounded-xl bg-white/10 border border-white/15 backdrop-blur-sm flex items-start gap-3 mt-4">
             <ShieldAlert className="w-5 h-5 text-[#F47721] shrink-0 mt-0.5" />
             <div className="text-xs text-white/90 leading-relaxed">
               <span className="font-bold text-white block mb-0.5">

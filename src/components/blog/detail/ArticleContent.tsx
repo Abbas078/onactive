@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { Info, AlertTriangle, Lightbulb, ShieldCheck } from "lucide-react";
 import { ArticleSection } from "@/constants/blogData";
 
@@ -11,23 +10,9 @@ interface ArticleContentProps {
 
 export function ArticleContent({
   sections,
-  featuredImage,
-  featuredImageAlt,
 }: ArticleContentProps) {
   return (
     <article className="prose prose-slate max-w-none space-y-10">
-      {/* Featured Image */}
-      <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden bg-[#102D4F]/5 border border-[#DCE5EF] shadow-sm">
-        <Image
-          src={featuredImage}
-          alt={featuredImageAlt}
-          fill
-          sizes="(max-width: 1024px) 100vw, 800px"
-          className="object-cover"
-          priority
-        />
-      </div>
-
       {/* Article Sections */}
       {sections.map((section) => (
         <section key={section.id} id={section.id} className="scroll-mt-28 space-y-4">
