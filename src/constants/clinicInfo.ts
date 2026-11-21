@@ -95,24 +95,27 @@ export const DOCTOR_PROFILE: DoctorProfile = {
 
 export const CLINIC_STATS = [
   {
-    label: "Years Clinical Experience",
-    value: "12+",
-    icon: "UserCheck",
-  },
-  {
-    label: "SMS Medical College",
-    value: "M.S. Ortho",
+    label: "SMS Medical College, Jaipur",
+    value: "M.S. Orthopaedics",
+    subtext: "Post-Graduate Residency",
     icon: "GraduationCap",
   },
   {
-    label: "AR Surgical Navigation",
-    value: "Pixee Certified",
+    label: "Joint Replacement & Arthroscopy",
+    value: "Fellowship Trained",
+    subtext: "Sub-specialty Fellowship",
+    icon: "Award",
+  },
+  {
+    label: "Computer-Navigated Knee Care",
+    value: "Pixee AR Certified",
+    subtext: "Sub-millimeter Precision",
     icon: "Activity",
   },
   {
-    label: "Patient Satisfaction",
-    value: "4.9★",
-    subtext: "(Verified Reviews)",
-    icon: "Star",
+    label: "Sevayatan Multispeciality Hospital",
+    value: "Cashless & RGHS",
+    subtext: "Empaneled OT Center",
+    icon: "ShieldCheck",
   },
 ];

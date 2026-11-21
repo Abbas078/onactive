@@ -3,71 +3,67 @@ import { Metadata } from "next";
 import { HeroSection } from "@/components/home/HeroSection";
 import { TrustStrip } from "@/components/home/TrustStrip";
 import { DoctorIntroSection } from "@/components/home/DoctorIntroSection";
-import { ExpertiseSection } from "@/components/home/ExpertiseSection";
 import { FeaturedTreatmentsSection } from "@/components/home/FeaturedTreatmentsSection";
 import { ConditionsSection } from "@/components/home/ConditionsSection";
 import { WhyChooseUsSection } from "@/components/home/WhyChooseUsSection";
 import { FacilitiesSection } from "@/components/home/FacilitiesSection";
+import { VideoShowcaseSection } from "@/components/home/VideoShowcaseSection";
 import { PatientJourneySection } from "@/components/home/PatientJourneySection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { BlogPreviewSection } from "@/components/home/BlogPreviewSection";
 import { AppointmentCtaSection } from "@/components/home/AppointmentCtaSection";
 import { ClinicLocationsSection } from "@/components/home/ClinicLocationsSection";
-import { VideoShowcaseSection } from "@/components/home/VideoShowcaseSection";
 
 export const metadata: Metadata = {
   title: "Orthopedic Doctor in Jaipur | Dr. Ankit Jaipal | Arthrogenix",
   description:
-    "Dr. Ankit Jaipal is a leading orthopedic doctor in Jaipur & AR joint replacement specialist. Knee pain, TKR, ACL/PCL reconstruction, shoulder arthroscopy & complex trauma. RGHS & cashless at Sevayatan Hospital.",
+    "Dr. Ankit Jaipal is a Consultant Orthopaedics & AR joint replacement specialist in Jaipur. Computer-navigated knee replacement, ACL/PCL reconstruction, shoulder arthroscopy & sports care. Full RGHS & cashless at Sevayatan Hospital.",
 };
 
 export default function HomePage() {
   return (
     <div className="flex flex-col w-full overflow-x-hidden">
-      {/* 1. Hero Section */}
+      {/* 1. Hero Section with IMG-04 and Dual Action CTAs */}
       <HeroSection />
 
-      {/* 2. Verified Trust Indicators */}
+      {/* 2. Verified Clinical Accreditation & Credentials Strip */}
       <TrustStrip />
 
-      {/* 3. Doctor Introduction */}
+      {/* 3. Doctor Introduction & Philosophy */}
       <DoctorIntroSection />
 
-      {/* 4. Orthopaedic Expertise & Specialties */}
-      <ExpertiseSection />
-
-      {/* 5. Featured Treatments & Surgeries */}
+      {/* 4. Surgical Specialties & Joint Care */}
       <FeaturedTreatmentsSection />
 
-      {/* 6. Conditions Treated with Patient Assessment Links */}
+      {/* 5. Conditions Directory with Direct Guides */}
       <ConditionsSection />
 
-      {/* 7. Why Choose Arthrogenix */}
+      {/* 6. Why Choose Dr. Ankit Jaipal */}
       <WhyChooseUsSection />
 
-      {/* 8. Advanced Medical Facilities & Technology */}
+      {/* 7. Advanced Surgical Technology & OT Infrastructure */}
       <FacilitiesSection />
 
-      {/* 9. Dedicated Video Showcase & OT Precision */}
+      {/* 8. Dedicated Video Showcase & OT Precision */}
       <VideoShowcaseSection />
 
-      {/* 10. Patient Treatment Journey */}
+      {/* 9. Structured Patient Treatment Pathway */}
       <PatientJourneySection />
 
-      {/* 11. Patient Testimonials & Google Reviews */}
+      {/* 10. Clinical Care Pathway & Ethical Standards */}
       <TestimonialsSection />
 
-      {/* 12. Frequently Asked Questions */}
+      {/* 11. Frequently Asked Questions */}
       <FaqSection />
 
-      {/* 13. Latest Orthopaedic Articles */}
+      {/* 12. Latest Patient Educational Articles */}
       <BlogPreviewSection />
 
-      {/* 14. Prominent Appointment Booking Banner */}
+      {/* 13. Prominent Appointment Booking Banner */}
       <AppointmentCtaSection />
 
-      {/* 15. Clinic Locations & Consultation Details */}
+      {/* 14. Clinic Locations & Consultation Details */}
       <ClinicLocationsSection />
     </div>
   );

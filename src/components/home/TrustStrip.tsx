@@ -1,49 +1,47 @@
 import React from "react";
-import { Award, GraduationCap, Activity, Star } from "lucide-react";
+import { Award, GraduationCap, Activity, ShieldCheck } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { CLINIC_STATS } from "@/constants/clinicInfo";
 
 export function TrustStrip() {
-  const getIcon = (idx: number) => {
-    switch (idx) {
-      case 0:
-        return <Award className="w-5 h-5 sm:w-6 sm:h-6" />;
-      case 1:
-        return <GraduationCap className="w-5 h-5 sm:w-6 sm:h-6" />;
-      case 2:
-        return <Activity className="w-5 h-5 sm:w-6 sm:h-6" />;
-      case 3:
+  const getIcon = (iconName: string) => {
+    switch (iconName) {
+      case "GraduationCap":
+        return <GraduationCap className="w-5 h-5 text-[#F47721]" />;
+      case "Award":
+        return <Award className="w-5 h-5 text-[#F47721]" />;
+      case "Activity":
+        return <Activity className="w-5 h-5 text-[#F47721]" />;
+      case "ShieldCheck":
       default:
-        return <Star className="w-5 h-5 sm:w-6 sm:h-6 fill-[#F47721]" />;
+        return <ShieldCheck className="w-5 h-5 text-[#F47721]" />;
     }
   };
 
   return (
-    <section className="bg-white py-6 sm:py-8 border-b border-[#DCE5EF]">
+    <section className="bg-white py-5 sm:py-6 border-b border-[#DCE5EF] shadow-xs">
       <Container>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
           {CLINIC_STATS.map((stat, idx) => (
             <div
               key={idx}
-              className="flex items-center gap-3 sm:gap-4 p-2.5 sm:p-4 rounded-xl hover:bg-[#F5F8FB] transition-colors border border-transparent hover:border-[#DCE5EF] min-w-0"
+              className="flex items-center gap-3.5 p-3 sm:p-3.5 rounded-xl bg-[#F5F8FB]/70 border border-[#DCE5EF] hover:border-[#F47721]/50 hover:bg-white hover:shadow-sm transition-all duration-200 min-w-0"
             >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#FFF4EB] border border-[#FDE8D7] flex items-center justify-center text-[#F47721] shrink-0">
-                {getIcon(idx)}
+              <div className="w-11 h-11 rounded-xl bg-[#FFF4EB] border border-[#FDE8D7] flex items-center justify-center shrink-0">
+                {getIcon(stat.icon)}
               </div>
               <div className="min-w-0">
-                <div className="flex items-baseline gap-1">
-                  <span className="text-lg sm:text-2xl font-black text-[#102D4F]">
-                    {stat.value}
-                  </span>
-                  {stat.subtext && (
-                    <span className="text-[10px] sm:text-xs text-[#52647A] font-medium truncate">
-                      {stat.subtext}
-                    </span>
-                  )}
+                <div className="text-sm sm:text-base font-bold text-[#102D4F] leading-snug truncate">
+                  {stat.value}
                 </div>
-                <p className="text-[11px] sm:text-xs font-semibold text-[#52647A] truncate">
+                <p className="text-[11px] font-semibold text-[#52647A] truncate">
                   {stat.label}
                 </p>
+                {stat.subtext && (
+                  <p className="text-[10px] text-[#7B8E9F] font-medium truncate">
+                    {stat.subtext}
+                  </p>
+                )}
               </div>
             </div>
           ))}
@@ -52,4 +50,3 @@ export function TrustStrip() {
     </section>
   );
 }
-
