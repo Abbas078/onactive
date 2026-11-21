@@ -12,7 +12,7 @@ export function BlogCard({ post }: BlogCardProps) {
   return (
     <article className="group bg-white rounded-2xl border border-[#DCE5EF] overflow-hidden hover:shadow-xl hover:border-[#102D4F]/30 transition-all duration-300 flex flex-col h-full">
       {/* Thumbnail */}
-      <div className="relative aspect-[16/10] overflow-hidden bg-[#102D4F]/5">
+      <div className="relative aspect-[16/9] overflow-hidden bg-[#102D4F]/5">
         <Image
           src={post.image}
           alt={post.imageAlt}

@@ -123,7 +123,7 @@ export function BlogListing() {
 
             <div className="bg-white rounded-2xl border border-[#DCE5EF] overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
-                <div className="relative aspect-[16/10] lg:aspect-auto lg:col-span-6 bg-[#102D4F]/5 min-h-[260px]">
+                <div className="relative aspect-[16/9] lg:aspect-auto lg:col-span-6 bg-[#102D4F]/5 min-h-[260px]">
                   <Image
                     src={featuredPost.image}
                     alt={featuredPost.imageAlt}
